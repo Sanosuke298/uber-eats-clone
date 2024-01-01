@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 
 export default function HeaderTabs(props) {
   return (
@@ -23,7 +23,7 @@ export default function HeaderTabs(props) {
 }
 
 const HeaderButton = (props) => (
-  <Pressable
+  <TouchableOpacity
     style={{
       backgroundColor: props.activeTab === props.text ? "black" : "white",
       paddingVertical: 6,
@@ -41,5 +41,5 @@ const HeaderButton = (props) => (
     >
       {props.text}
     </Text>
-  </Pressable>
+  </TouchableOpacity>
 );
